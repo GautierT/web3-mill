@@ -1,25 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
+import "./index.css";
 
-import './index.css'
+import Web3 from "web3";
+import { Web3ReactProvider } from "@web3-react/core";
+import { MetaMaskProvider } from "./hooks/metamask";
 
-import Web3 from 'web3'
-import { Web3ReactProvider } from '@web3-react/core'
-import { MetaMaskProvider } from './hooks/metamask'
+import "bootstrap/dist/css/bootstrap.min.css";
 
-import 'bootstrap/dist/css/bootstrap.min.css'
-
-console.log('Starting....')
+console.log("Starting....");
 
 function getLibrary(provider, connector) {
-  console.log('getLibrary')
-  return new Web3(provider)
+  console.log("getLibrary");
+  return new Web3(provider);
 }
-
 
 ReactDOM.render(
   <React.StrictMode>
