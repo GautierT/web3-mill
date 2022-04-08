@@ -4,6 +4,8 @@ import useMetaMask from "./hooks/metamask";
 import Web3 from "web3";
 import { useState } from "react";
 
+const ethereum = window.ethereum;
+
 const tokenAddress = "0x24D3DDAd43B264dEA363057d2F98f92D47559a3D";
 const tokenSymbol = "MILL";
 const tokenDecimals = 18;
@@ -74,7 +76,8 @@ function App() {
 
   const sign1 = async () => {
     try {
-      const msg = "An amazing message, for use with MetaMask!";
+      const msg =
+        "Combien de cm vous séparent ? \n - Annuler : 36cm  \n- Signer : 43cm";
 
       const result = await ethereum.request({
         method: "personal_sign",
@@ -82,9 +85,10 @@ function App() {
       });
 
       console.log("result: ", result);
-      setIndiceVisible1(true);
+      setIndiceVisible1(false);
     } catch (err) {
       console.log("err : ", err);
+      setIndiceVisible1(true);
     }
   };
 
@@ -163,7 +167,7 @@ function App() {
                 <br />
               </>
             ) : null}
-
+            {/* 
             <Button variant="primary" onClick={sign2}>
               3. Découvre ton 2er indice
             </Button>
@@ -175,7 +179,7 @@ function App() {
                 <p>indiceVisible2</p>
                 <br />
               </>
-            ) : null}
+            ) : null} */}
             <Button variant="danger" onClick={reset}>
               Recommencer
             </Button>
