@@ -163,7 +163,17 @@ function App() {
             <br />
             {indiceVisible1 ? (
               <>
-                <p>indiceVisible1</p>
+                <p style={{ fontSize: "14px" }}>
+                  L’opération est en cours. <br /> Un agent ami est arrivé de
+                  Washington. C’est lui qui te guidera pour quitter le pays.{" "}
+                  <br /> Il passera devant le bouillon Pigalle à 16h45. Tu
+                  devras le prendre en filature jusqu’à nouvel ordre. Il aura
+                  une valise noir, un grand manteau et des lunettes. Tu dois le
+                  suivre quoiqu’il en coûte et ne pas te faire repérer par lui
+                  ni par les agents du KGB qui vous suivront probablement.
+                  <br /> Une fois parti de Paris, tu devras prendre contact avec
+                  lui.
+                </p>
                 <br />
               </>
             ) : null}
