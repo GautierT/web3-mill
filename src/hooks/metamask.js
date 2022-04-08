@@ -12,13 +12,6 @@ export const MetaMaskProvider = ({ children }) => {
   const [shouldDisable, setShouldDisable] = useState(false); // Should disable connect button while connecting to MetaMask
   const [isLoading, setIsLoading] = useState(true);
 
-  // Init Loading
-  useEffect(() => {
-    connect().then((val) => {
-      setIsLoading(false);
-    });
-  }, []);
-
   // Check when App is Connected or Disconnected to MetaMask
   const handleIsActive = useCallback(() => {
     console.log("App is connected with MetaMask ", active);

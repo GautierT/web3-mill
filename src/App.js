@@ -4,14 +4,10 @@ import useMetaMask from "./hooks/metamask";
 import Web3 from "web3";
 import { useState } from "react";
 
-const ethereum = window.ethereum;
-
-const tokenAddress = "0xc282936d12db8177c682a475cd041e70b0ba8718";
+const tokenAddress = "0x24D3DDAd43B264dEA363057d2F98f92D47559a3D";
 const tokenSymbol = "MILL";
 const tokenDecimals = 18;
 const tokenImage = "https://gcdnb.pbrd.co/images/rQ79IK8Yuknk.jpg?o=10";
-
-const web3 = new Web3(window.ethereum);
 
 const ABI = [
   {
@@ -37,6 +33,8 @@ const ABI = [
 function App() {
   const { connect, disconnect, isActive, account, shouldDisable } =
     useMetaMask();
+
+  const web3 = new Web3(window.ethereum);
 
   const [indiceVisible1, setIndiceVisible1] = useState(false);
   const [indiceVisible2, setIndiceVisible2] = useState(false);
