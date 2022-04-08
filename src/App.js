@@ -173,6 +173,12 @@ function App() {
                   ni par les agents du KGB qui vous suivront probablement.
                   <br /> Une fois parti de Paris, tu devras prendre contact avec
                   lui.
+                  <br />
+                  <br />
+                  <br />
+                </p>
+                <p style={{ fontSize: "18px" }}>
+                  Renvoie nous ce code 01692913
                 </p>
                 <br />
               </>
